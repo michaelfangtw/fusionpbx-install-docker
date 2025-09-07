@@ -1,5 +1,5 @@
-* A  fusionpbx docker that  base on https://github.com/fusionpbx/fusionpbx-install.sh
-** Including below services that in Dockerfile
+# A  fusionpbx docker that  base on https://github.com/fusionpbx/fusionpbx-install.sh
+## Including below services that in Dockerfile
 ```
 iptables
 sngrep
@@ -11,7 +11,7 @@ freeswitch
 fail2ban
 
 ```
-** 1.modify  config.sh and chown
+## 1.modify  config.sh and chown
 ```
 chown 33:33 config -R
 
@@ -20,7 +20,7 @@ chown 33:33 config -R
 ```
 docker build -t fusionpbx-docker:1.0 .
 ```
-** 3. modify docker-copmpose.yaml
+## 3. modify docker-copmpose.yaml
 ```
 services:
   pbx:
@@ -55,7 +55,7 @@ services:
     entrypoint: ["/usr/sbin/init"]
 
 ```
-** step 4.
+## step 4.
 ```
 docker compose up -d
 ```
