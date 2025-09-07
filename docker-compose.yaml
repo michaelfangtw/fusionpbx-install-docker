@@ -1,27 +1,3 @@
-* A  fusionpbx docker that  base on https://github.com/fusionpbx/fusionpbx-install.sh
-** Including below services that in Dockerfile
-```
-iptables
-sngrep
-fusionpbx
-php
-nginx
-postgres
-freeswitch
-fail2ban
-
-```
-** 1.modify  config.sh and chown
-```
-chown 33:33 config -R
-
-```
-** 2.build image
-```
-docker build -t fusionpbx-docker:1.0 .
-```
-** 3. modify docker-copmpose.yaml
-```
 services:
   pbx:
     # Build the image from the local Dockerfile so the local modified installer
@@ -29,7 +5,7 @@ services:
     #build:
     #  context: .
     #  dockerfile: Dockerfile
-    image: fusionpbx-docker:1.0
+    image: fusionpbx-install-docker:1.0
 
     # Use host networking to allow the container to access all host ports.
     # This is necessary for the large RTP port range.
@@ -53,12 +29,5 @@ services:
     #
     # Maps to the /usr/sbin/init command. This is the main process for the container.
     entrypoint: ["/usr/sbin/init"]
-
-```
-** step 4.
-```
-docker compose up -d
-```
-
 
 
