@@ -72,4 +72,24 @@ http://localhost
 id:amdin@localhost
 pass=password
 ```
+** if you cannot login failed, you can reset admin/pass
+```
 
+- if above steps failed ,you can reset admin password 
+```
+docker exec -it fusionpbx /bin/bash
+mv /etc/fusionpbx/config.conf to config.conf.old
+```
+# postgres db id/pass (DO NOT CHANGE)
+```
+ db host:localhost 
+ db user:fusionpbx
+ db password:password
+```
+
+# reset your new web admin
+```
+ -user: admin
+ -password: password
+```
+```
