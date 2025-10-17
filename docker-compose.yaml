@@ -2,10 +2,13 @@ services:
   pbx:
     # Build the image from the local Dockerfile so the local modified installer
     # (copied from workspace) is included in the image.
+    # you can build by yourself
     #build:
     #  context: .
     #  dockerfile: Dockerfile
-    image: fusionpbx-install-docker:1.0
+    
+    #using docker hub image
+    image: michaelfangtw/fusionpbx-docker:1.0
 
     # Use host networking to allow the container to access all host ports.
     # This is necessary for the large RTP port range.
