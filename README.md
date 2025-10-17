@@ -111,7 +111,12 @@ If you cannot log in to the web interface:
    mv /etc/fusionpbx/config.conf /etc/fusionpbx/config.conf.old
    ```
 
-3. Reset admin credentials:
+3. Set database configuration:
+   - **Host**: localhost
+   - **Username**: fusionpbx
+   - **Password**: password *(set in .env or config.sh)*
+
+4. Reset admin credentials:
    - **Username**: admin
    - **Password**: password
 
@@ -148,5 +153,7 @@ If you make changes inside the container and want to save them to a new image:
 2. Commit the changes to create a new image:
    ```bash
    docker commit fusionpbx fusionpbx-docker:1.0
+   docker commit fusionpbx michaelfangtw/fusionpbx-docker:1.0
    ```
-  
+
+   > **Note**: The second command creates an image with the correct username for pushing to Docker Hub.
