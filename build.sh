@@ -1,3 +1,4 @@
-TAG=1.0
+TAG=5.4
+docker system prune -f
 docker build -t fusionpbx-docker:$TAG .
 

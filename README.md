@@ -45,30 +45,30 @@ chown 33:33 config -R
 If you want to build the image locally:
 
 ```bash
-docker build -t fusionpbx-docker:1.0 .
+docker build -t fusionpbx-docker:5.4 .
 ```
 
 **Or use the pre-built image from Docker Hub:**
 
 ```bash
-docker pull michaelfangtw/fusionpbx-docker:1.0
+docker pull michaelfangtw/fusionpbx-docker:5.4
 ```
 
 - 📦 **Docker Hub**: [michaelfangtw/fusionpbx-docker](https://hub.docker.com/repository/docker/michaelfangtw/fusionpbx-docker)
-- 🏷️ **Latest Tag**: `michaelfangtw/fusionpbx-docker:1.0`
+- 🏷️ **Latest Tag**: `michaelfangtw/fusionpbx-docker:5.4`
 
 ### 3. Configure Docker Compose
 
 The `docker-compose.yaml` file is already configured. You can use either:
 
-- **Pre-built image** (default): `michaelfangtw/fusionpbx-docker:1.0`
+- **Pre-built image** (default): `michaelfangtw/fusionpbx-docker:5.4`
 - **Local build**: Uncomment the `build` section in the compose file
 
 ```yaml
 services:
   pbx:
     # Use pre-built image from Docker Hub
-    image: michaelfangtw/fusionpbx-docker:1.0
+    image: michaelfangtw/fusionpbx-docker:5.4
     
     # Or build locally (uncomment to use)
     # build:
@@ -176,8 +176,8 @@ If you make changes inside the container and want to save them to a new image:
 
 2. Commit the changes to create a new image:
    ```bash
-   docker commit fusionpbx fusionpbx-docker:1.0
-   docker commit fusionpbx michaelfangtw/fusionpbx-docker:1.0
+   docker commit fusionpbx fusionpbx-docker:5.4
+   docker tag fusionpbx-docker:5.4 michaelfangtw/fusionpbx-docker:5.4
    ```
 
    > **Note**: The second command creates an image with the correct username for pushing to Docker Hub.
