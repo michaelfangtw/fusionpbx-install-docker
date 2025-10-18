@@ -176,8 +176,10 @@ If you make changes inside the container and want to save them to a new image:
 
 2. Commit the changes to create a new image:
    ```bash
-   docker commit fusionpbx fusionpbx-docker:5.4
-   docker tag fusionpbx-docker:5.4 michaelfangtw/fusionpbx-docker:5.4
+   TAG=5.4
+   docker commit fusionpbx michaelfangtw/fusionpbx-docker:$TAG
+   docker push michaelfangtw/fusionpbx-docker:$TAG
+
    ```
 
    > **Note**: The second command creates an image with the correct username for pushing to Docker Hub.
