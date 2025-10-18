@@ -2,15 +2,18 @@
 
 A Docker implementation of FusionPBX based on the official [fusionpbx-install.sh](https://github.com/fusionpbx/fusionpbx-install.sh) installer.
 
-```
-ubuntu:24.04
-fusionpbx:5.4
-freeswitch:1.10.12
-php:8.3
-postgres:16
-```
+## � Overview
 
-## 📋 Included Services
+This Docker container provides a complete, ready-to-use FusionPBX installation with all necessary components pre-configured. It's designed to simplify the deployment of a full-featured PBX system using Docker containers.
+
+**Key Features:**
+- 🚀 One-command deployment
+- 🔧 Pre-configured services
+- 💾 Persistent data storage
+- 🌐 Host networking for RTP
+- 🔒 Security with fail2ban
+
+## �📋 Included Services
 
 The Docker image includes the following services:
 
@@ -41,9 +44,14 @@ If you want to build the image locally:
 docker build -t fusionpbx-docker:1.0 .
 ```
 
-Or use the pre-built image from Docker Hub:
-- **Docker Hub Repository**: [michaelfangtw/fusionpbx-docker](https://hub.docker.com/repository/docker/michaelfangtw/fusionpbx-docker)
-- **Image Tag**: `michaelfangtw/fusionpbx-docker:1.0`
+**Or use the pre-built image from Docker Hub:**
+
+```bash
+docker pull michaelfangtw/fusionpbx-docker:1.0
+```
+
+- 📦 **Docker Hub**: [michaelfangtw/fusionpbx-docker](https://hub.docker.com/repository/docker/michaelfangtw/fusionpbx-docker)
+- 🏷️ **Latest Tag**: `michaelfangtw/fusionpbx-docker:1.0`
 
 ### 3. Configure Docker Compose
 
@@ -83,9 +91,13 @@ docker compose up -d
 
 ## 📊 Software Versions
 
+- **Base OS**: Ubuntu 24.04
 - **FusionPBX**: 5.4.7
 - **FreeSWITCH**: 1.10.12
-- **Base OS**: Ubuntu 24.04
+- **PHP**: 8.3
+- **PostgreSQL**: 16
+- **Nginx**: Latest
+- **Fail2Ban**: Latest
 
 ## 🔐 Default Credentials
 
