@@ -1,9 +1,5 @@
 # FusionPBX Docker
-Base OS: Ubuntu 24.04
-FusionPBX: 5.4.7
-FreeSWITCH: 1.10.12
-PHP: 8.3
-PostgreSQL: 16
+Base OS: Ubuntu 24.04/FusionPBX: 5.4.7/FreeSWITCH: 1.10.12/PHP: 8.3/PostgreSQL: 16
 
 
 A Docker implementation of FusionPBX based on the official [fusionpbx-install.sh](https://github.com/fusionpbx/fusionpbx-install.sh) installer.
