@@ -2,6 +2,14 @@
 
 A Docker implementation of FusionPBX based on the official [fusionpbx-install.sh](https://github.com/fusionpbx/fusionpbx-install.sh) installer.
 
+```
+ubuntu:24.04
+fusionpbx:5.4
+freeswitch:1.10.12
+php:8.3
+postgres:16
+```
+
 ## 📋 Included Services
 
 The Docker image includes the following services:
