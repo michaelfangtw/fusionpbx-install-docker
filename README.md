@@ -142,7 +142,7 @@ If you cannot log in to the web interface:
 
 4. Reset admin credentials:
    - **Username**: admin
-   - **Password**: YOUR_PASSWORD
+   - **Password**: YOUR_PASSWORD *(set in .env or config.sh)*
 
 ### Database Connection Issues
 
