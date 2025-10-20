@@ -109,7 +109,7 @@ docker compose up -d
 
 - **URL**: http://localhost
 - **Username**: admin@localhost
-- **Password**: password
+- **Password**: YOUR_PASSWORD
 
 ### Database (PostgreSQL)
 
@@ -117,7 +117,7 @@ docker compose up -d
 
 - **Host**: localhost
 - **User**: fusionpbx
-- **Password**: password
+- **Password**: YOUR_PASSWORD
 
 ## 🔧 Troubleshooting
 
@@ -138,11 +138,11 @@ If you cannot log in to the web interface:
 3. Set database configuration:
    - **Host**: localhost
    - **Username**: fusionpbx
-   - **Password**: password *(set in .env or config.sh)*
+   - **Password**: YOUR_PASSWORD *(set in .env or config.sh)*
 
 4. Reset admin credentials:
    - **Username**: admin
-   - **Password**: password
+   - **Password**: YOUR_PASSWORD
 
 ### Database Connection Issues
 
